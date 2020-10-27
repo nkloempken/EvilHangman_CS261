@@ -16,16 +16,9 @@ public abstract class PlayMusic {
         try {
             Clip clip = AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(file));
-            if(file == Assets.backgroundMusic){
-                clip.loop(1000);
-            }else{
-                clip.start();
-            }
+            clip.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
-
 }
